@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Error = styled.span`
+export const Error = styled.div`
   height: 20px;
   margin: 15px 0 15px 15px;
   color: var(--error-color);

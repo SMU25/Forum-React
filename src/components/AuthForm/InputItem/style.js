@@ -9,6 +9,13 @@ export const Wrapper = styled.div`
   border: 1px solid #eaeaea;
   border-radius: 5px;
   position: relative;
+
+  & svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+  }
 `;
 
 export const Label = styled.label`
@@ -22,7 +29,7 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  width: 326px;
+  width: 315px;
   height: 15px;
   margin: 19px 0 0 15px;
   font-weight: 400;
@@ -30,4 +37,12 @@ export const Input = styled.input`
   line-height: 15px;
   border: none;
   outline: none;
+`;
+export const VisibilityBox = styled.div`
+  & svg {
+    width: 12px;
+    height: 12px;
+    right: 30px;
+    cursor: pointer;
+  }
 `;

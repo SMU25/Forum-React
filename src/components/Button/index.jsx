@@ -18,6 +18,7 @@ export const Button = ({
   color,
   img,
   disabled,
+  onClick,
 }) => {
   const setImg = (img) => {
     switch (img) {
@@ -53,6 +54,7 @@ export const Button = ({
       color={color}
       disabled={disabled}
       img={img}
+      onClick={onClick}
     >
       {img && <img src={setImg(img)} alt={setImg(img)} />}
       {children}
