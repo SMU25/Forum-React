@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { GlobalStyle, Container } from "./globalStyles";
 import { Header } from "components";
-import { Home, NotFound, Registration, Login } from "pages";
+import { Home, NotFound, Registration, Login, Questions } from "pages";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />}>
-            <Route path="/questions" element={<div>questions</div>} />
+            <Route path="/" element={<Questions />} />
             <Route path="/tags" element={<div>tags</div>} />
             <Route path="/ranking" element={<div>ranking</div>} />
           </Route>

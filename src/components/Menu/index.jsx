@@ -8,11 +8,11 @@ export const Menu = ({ title, menuItems }) => {
     <Wrapper>
       <h3>{title}</h3>
       <ul>
-        {menuItems.map((item) => (
-          <li key={item.href}>
-            <NavLink to={item.href}>
-              <img src={item.icon} alt={item.name} />
-              {item.name}
+        {menuItems.map(({ Icon, href, name }) => (
+          <li key={href}>
+            <NavLink to={href}>
+              <Icon />
+              {name}
             </NavLink>
           </li>
         ))}

@@ -17,30 +17,37 @@ export const Wrapper = styled.div`
       font-weight: 700;
       font-size: 13px;
       line-height: 15px;
+      margin: 10px 0 0;
       a {
         display: flex;
         align-items: center;
         height: 41px;
         padding: 0 0 0 50px;
       }
-      img {
+      svg {
         margin: 0 12px 0 0;
       }
 
       &:hover {
-        background-color: var(--rose-white-color);
         a {
+          background-color: var(--rose-white-color);
           padding: 0 0 0 45px;
           border-left: 5px solid var(--orange-color);
         }
-        svg g {
+
+        & svg path {
+          stroke: var(--orange-color);
         }
       }
     }
   }
 
   & .active {
+    background-color: var(--rose-white-color);
     padding: 0 0 0 45px;
     border-left: 5px solid var(--orange-color);
+    & svg path {
+      stroke: var(--orange-color);
+    }
   }
 `;

@@ -13,4 +13,5 @@ export const Navbar = styled.nav`
 
 export const Content = styled.section`
   width: 100%;
+  background-color: var(--bg-color);
 `;

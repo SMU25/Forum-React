@@ -5,3 +5,5 @@ export { LayoutAuthPages } from "./LayoutAuthPages";
 export { AuthForm } from "./AuthForm";
 export { Search } from "./Search";
 export { Menu } from "./Menu";
+export { Sorting } from "./Sorting";
+export { Post } from "./Post";
