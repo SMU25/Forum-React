@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Header } from "components";
-import { Home, NotFound, Registration, Login } from "pages";
 
 import { GlobalStyle, Container } from "./globalStyles";
+import { Header } from "components";
+import { Home, NotFound, Registration, Login } from "pages";
 
 function App() {
   return (
@@ -13,7 +13,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="*" element={<NotFound />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />}>
+            <Route path="/questions" element={<div>questions</div>} />
+            <Route path="/tags" element={<div>tags</div>} />
+            <Route path="/ranking" element={<div>ranking</div>} />
+          </Route>
           <Route path="/registration" element={<Registration />} />
           <Route path="/login" element={<Login />} />
         </Routes>

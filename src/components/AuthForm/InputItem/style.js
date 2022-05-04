@@ -44,5 +44,8 @@ export const VisibilityBox = styled.div`
     height: 12px;
     right: 30px;
     cursor: pointer;
+    g {
+      fill: var(--black-gray-color);
+    }
   }
 `;

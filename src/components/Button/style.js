@@ -4,6 +4,7 @@ export const Wrapper = styled.button`
   display:flex;
   justify-content:center;
   align-items:center;
+  font-family: var(--roboto-font);
   font-size: 12px;
   line-height: 14px;
   font-weight: 900;

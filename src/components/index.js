@@ -3,3 +3,5 @@ export { Auth } from "./Auth";
 export { Button } from "./Button";
 export { LayoutAuthPages } from "./LayoutAuthPages";
 export { AuthForm } from "./AuthForm";
+export { Search } from "./Search";
+export { Menu } from "./Menu";

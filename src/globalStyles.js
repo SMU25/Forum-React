@@ -10,20 +10,22 @@ export const GlobalStyle = createGlobalStyle`
     color: black;
   }
  :root{
-   --roboto-font: "Roboto" ,sans-serif;
+    --roboto-font: "Roboto" ,sans-serif;
 
     --orange-color: #F48023;
     --gray-color: #EAEAEA;
     --dark-gray-color:#808080;
     --blue-color: #1682FD ;
     --bg-color: #FAFAFA;
-    --error-color: #FF0000
+    --error-color: #FF0000;
+    --black-gray-color:#4e4e5c;
+    --rose-white-color: #FCF4EC;
 
 
  }
-   body {
+  body {
      font-family: var(--roboto-font);
-   }
+  }
 
 `;
 

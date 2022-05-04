@@ -11,7 +11,7 @@ export const Wrapper = styled.section`
 
 export const Info = styled.div`
   max-width: 580px;
-  padding: 193px 100px;
+  padding: 193px 100px 0;
 `;
 
 export const Title = styled.h2`

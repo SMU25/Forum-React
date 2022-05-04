@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import { Wrapper, Label, Input, VisibilityBox } from "./style";
 import { ReactComponent as Check } from "assets/check.svg";
@@ -9,8 +9,20 @@ import { ReactComponent as Visible } from "assets/view.svg";
 export const InputItem = ({ formik, id, name, type, labelText, required }) => {
   const [visible, setVisible] = useState(false);
 
+  const inputItemRef = useRef(null);
+
+  const onClickOutside = (e) => {
+    if (!e.path.includes(inputItemRef.current)) {
+      setVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", onClickOutside);
+  }, []);
+
   return (
-    <Wrapper>
+    <Wrapper ref={inputItemRef}>
       <Label htmlFor={id}>{required ? labelText + "*" : labelText}</Label>
       <Input
         id={id}
@@ -21,15 +33,20 @@ export const InputItem = ({ formik, id, name, type, labelText, required }) => {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
       />
-      {!!formik.errors[name] && formik.touched[name] ? <XCicrcle /> : <Check />}
-      <VisibilityBox>
-        {type === "password" &&
-          (visible ? (
-            <Visible onClick={() => setVisible(false)} />
+      {!!formik.errors[name] && formik.touched[name] ? (
+        <XCicrcle title={formik.errors[name]} />
+      ) : (
+        <Check />
+      )}
+      {type === "password" && !!formik.values[name] && (
+        <VisibilityBox>
+          {visible ? (
+            <Visible title="Hide password" onClick={() => setVisible(false)} />
           ) : (
-            <Hidden onClick={() => setVisible(true)} />
-          ))}
-      </VisibilityBox>
+            <Hidden title="Show password" onClick={() => setVisible(true)} />
+          )}
+        </VisibilityBox>
+      )}
     </Wrapper>
   );
 };
