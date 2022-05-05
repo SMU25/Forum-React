@@ -18,7 +18,6 @@ export const OpenCloseButton = styled.button`
   top: 20px;
   ${({ isOpenMenu }) =>
     isOpenMenu ? "right:20px" : "left:50%;  transform: translateX(-50%);"};
-
   background-color: inherit;
   border: none;
   outline: none;

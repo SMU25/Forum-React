@@ -8,7 +8,7 @@ export const Auth = () => {
   return (
     <Wrapper>
       <Link to="/registration">
-        <Button width="M" height="M" img="userPlus">
+        <Button width="M" height="M" icon="userPlus">
           Register
         </Button>
       </Link>

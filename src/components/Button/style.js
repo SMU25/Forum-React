@@ -92,7 +92,7 @@ export const Wrapper = styled.button`
     &:focus{
         opacity: 0.8;
     }
-    & img{
+    & svg{
         margin: 0 12px 0 0;
     }
 `;

@@ -2,12 +2,12 @@ import React from "react";
 
 import { Wrapper } from "./style";
 
-import userPlus from "assets/user-plus.svg";
-import plusCircle from "assets/plus-circle.svg";
-import arrowUp from "assets/arrow-up.svg";
-import message from "assets/message-square.svg";
-import image from "assets/image.svg";
-import send from "assets/send.svg";
+import { ReactComponent as UserPlus } from "assets/user-plus.svg";
+import { ReactComponent as PlusCircle } from "assets/plus-circle.svg";
+import { ReactComponent as ArrowUp } from "assets/arrow-up.svg";
+import { ReactComponent as Message } from "assets/message-square.svg";
+import { ReactComponent as Image } from "assets/image.svg";
+import { ReactComponent as Send } from "assets/send.svg";
 
 export const Button = ({
   children,
@@ -16,29 +16,29 @@ export const Button = ({
   bg,
   margin,
   color,
-  img,
+  icon,
   disabled,
   onClick,
 }) => {
-  const setImg = (img) => {
-    switch (img) {
+  const setIcon = (icon) => {
+    switch (icon) {
       case "userPlus":
-        return userPlus;
+        return <UserPlus />;
 
       case "plusCircle":
-        return plusCircle;
+        return <PlusCircle />;
 
       case "arrowUp":
-        return arrowUp;
+        return <ArrowUp />;
 
       case "message":
-        return message;
+        return <Message />;
 
       case "image":
-        return image;
+        return <Image />;
 
       case "send":
-        return send;
+        return <Send />;
 
       default:
         return null;
@@ -53,10 +53,10 @@ export const Button = ({
       margin={margin}
       color={color}
       disabled={disabled}
-      img={img}
+      icon={icon}
       onClick={onClick}
     >
-      {img && <img src={setImg(img)} alt={setImg(img)} />}
+      {icon && setIcon(icon)}
       {children}
     </Wrapper>
   );

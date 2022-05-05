@@ -25,12 +25,12 @@ export const Wrapper = styled.div`
         font-size: ${({ isOpenMenu }) => (isOpenMenu ? "13px" : "0")};
         line-height: 15px;
         padding: ${({ isOpenMenu }) =>
-          isOpenMenu ? "0 0 0 45px" : " 0 15px 0 15px"};
+          isOpenMenu ? "0 0 0 45px" : " 0 3px 0 15px"};
         border-left: 5px solid white;
         transition: 0.5s;
       }
       svg {
-        margin: ${({ isOpenMenu }) => (isOpenMenu ? "0 12px 0 0" : "0")};
+        margin: 0 12px 0 0;
       }
 
       &:hover {

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Wrapper, Logo } from "./style";
-import { Auth } from "components";
+import { Authorized, Auth } from "components";
 
 import logo from "assets/logo.svg";
 
@@ -17,7 +17,7 @@ export const Header = () => {
           </h1>
         </Logo>
       </Link>
-      <Auth />
+      {true ? <Authorized /> : <Auth />}
     </Wrapper>
   );
 };

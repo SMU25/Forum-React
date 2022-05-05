@@ -1,4 +1,5 @@
 export { Header } from "./Header";
+export { Authorized } from "./Authorized";
 export { Auth } from "./Auth";
 export { Button } from "./Button";
 export { LayoutAuthPages } from "./LayoutAuthPages";
