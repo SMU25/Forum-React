@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 import { Wrapper } from "./style";
 
-export const Menu = ({ title, menuItems }) => {
+export const Menu = ({ title, menuItems, isOpenMenu }) => {
   return (
-    <Wrapper>
+    <Wrapper isOpenMenu={isOpenMenu}>
       <h3>{title}</h3>
       <ul>
         {menuItems.map(({ Icon, href, name }) => (

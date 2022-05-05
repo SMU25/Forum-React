@@ -5,33 +5,38 @@ export const Wrapper = styled.div`
   text-tarnsform: capitalize;
 
   & h3 {
-    margin: 0 12px 0 50px;
+    margin: ${({ isOpenMenu }) => (isOpenMenu ? "0 0 0 50px" : "0 0 0 15px")};
     color: var(--dark-gray-color);
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
+    transition: 0.5s;
   }
   & ul {
     li {
       width: 100%;
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 15px;
       margin: 10px 0 0;
+
       a {
         display: flex;
         align-items: center;
         height: 41px;
-        padding: 0 0 0 50px;
+        font-weight: 700;
+        font-size: ${({ isOpenMenu }) => (isOpenMenu ? "13px" : "0")};
+        line-height: 15px;
+        padding: ${({ isOpenMenu }) =>
+          isOpenMenu ? "0 0 0 45px" : " 0 15px 0 15px"};
+        border-left: 5px solid white;
+        transition: 0.5s;
       }
       svg {
-        margin: 0 12px 0 0;
+        margin: ${({ isOpenMenu }) => (isOpenMenu ? "0 12px 0 0" : "0")};
       }
 
       &:hover {
         a {
           background-color: var(--rose-white-color);
-          padding: 0 0 0 45px;
+          color: var(--orange-color);
           border-left: 5px solid var(--orange-color);
         }
 
@@ -44,7 +49,7 @@ export const Wrapper = styled.div`
 
   & .active {
     background-color: var(--rose-white-color);
-    padding: 0 0 0 45px;
+    color: var(--orange-color);
     border-left: 5px solid var(--orange-color);
     & svg path {
       stroke: var(--orange-color);

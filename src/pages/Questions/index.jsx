@@ -8,7 +8,7 @@ export const Questions = () => {
     <Wrapper>
       <Sorting />
       <Posts>
-        {Array.from({ length: 4 }).map((item, index) => (
+        {Array.from({ length: 4 }).map((_, index) => (
           <Post key={index} />
         ))}
       </Posts>
